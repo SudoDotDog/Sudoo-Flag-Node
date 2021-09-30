@@ -5,14 +5,18 @@
  */
 
 import { FlagManager } from "@sudoo/flag";
+import { NodeFlagStorage } from "./declare";
+import { utilGetFolderStorage } from "./util";
 
 export class NodeFlagManager<F extends string = string> {
 
-    public static fromFolder<F extends string = string>(folder: string): NodeFlagManager<F> {
+    public static async fromFolder<F extends string = string>(folder: string): Promise<NodeFlagManager<F>> {
 
-        const flag: FlagManager<F> = FlagManager.fromStorage()
+        const storage: NodeFlagStorage<F> = await utilGetFolderStorage<F>(folder);
 
-        return new NodeFlagManager<F>();
+        const flag: FlagManager<F> = FlagManager.fromStorage(storage.originalStorage);
+
+        return new NodeFlagManager<F>(flag);
     }
 
     private readonly _flag: FlagManager<F>;
