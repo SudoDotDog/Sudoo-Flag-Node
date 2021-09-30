@@ -16,14 +16,14 @@
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Flag-Node#readme",
   "peerDependencies": {
-    "@sudoo/flag": "^1.0.0"
+    "@sudoo/flag": "^1.0.1"
   },
   "dependencies": {
     "@sudoo/io": "^1.8.0"
   },
   "devDependencies": {
     "@sudoo/build-utils": "^1.0.0",
-    "@sudoo/flag": "^1.0.0",
+    "@sudoo/flag": "^1.0.1",
     "@sudoo/license": "^1.1.0",
     "@sudoo/triforce": "^2.15.0"
   },
