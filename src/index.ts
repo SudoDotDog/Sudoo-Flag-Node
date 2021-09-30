@@ -5,3 +5,5 @@
  */
 
 export * from "./flag-node";
+export * from "./util";
+
