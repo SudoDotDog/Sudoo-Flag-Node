@@ -18,6 +18,9 @@
   "peerDependencies": {
     "@sudoo/flag": "^1.0.0"
   },
+  "dependencies": {
+    "@sudoo/io": "^1.8.0"
+  },
   "devDependencies": {
     "@sudoo/build-utils": "^1.0.0",
     "@sudoo/flag": "^1.0.0",
