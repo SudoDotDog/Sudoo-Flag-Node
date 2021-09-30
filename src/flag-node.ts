@@ -4,13 +4,19 @@
  * @description FlagNode
  */
 
-export class NodeFlagManager {
+import { FlagManager } from "@sudoo/flag";
 
-    public static create(): NodeFlagManager {
-        return new NodeFlagManager();
+export class NodeFlagManager<F extends string = string> {
+
+    public static fromFolder<F extends string = string>(): NodeFlagManager<F> {
+
+        return new NodeFlagManager<F>();
     }
 
+    private readonly _flag: FlagManager<F>;
+
     private constructor() {
-        // tslint:disable-next-line
+
+        this._flag = FlagManager.empty<F>();
     }
 }
