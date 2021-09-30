@@ -16,7 +16,7 @@ describe('Given {NodeFlagManager} Class', (): void => {
 
     it('should be able to construct', (): void => {
 
-        const instance: NodeFlagManager = NodeFlagManager.create();
+        const instance: NodeFlagManager = NodeFlagManager.empty();
         expect(instance).to.be.instanceOf(NodeFlagManager);
     });
 });

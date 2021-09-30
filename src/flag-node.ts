@@ -10,6 +10,11 @@ import { utilGetFolderStorage } from "./util";
 
 export class NodeFlagManager<F extends string = string> {
 
+    public static empty(): NodeFlagManager<string> {
+
+        return new NodeFlagManager<string>(FlagManager.empty());
+    }
+
     public static async fromFolder<F extends string = string>(folder: string): Promise<NodeFlagManager<F>> {
 
         const storage: NodeFlagStorage<F> = await utilGetFolderStorage<F>(folder);
