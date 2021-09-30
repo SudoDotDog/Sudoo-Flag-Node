@@ -8,15 +8,17 @@ import { FlagManager } from "@sudoo/flag";
 
 export class NodeFlagManager<F extends string = string> {
 
-    public static fromFolder<F extends string = string>(): NodeFlagManager<F> {
+    public static fromFolder<F extends string = string>(folder: string): NodeFlagManager<F> {
+
+        const flag: FlagManager<F> = FlagManager.fromStorage()
 
         return new NodeFlagManager<F>();
     }
 
     private readonly _flag: FlagManager<F>;
 
-    private constructor() {
+    private constructor(flag: FlagManager<F>) {
 
-        this._flag = FlagManager.empty<F>();
+        this._flag = flag;
     }
 }
