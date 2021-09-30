@@ -15,9 +15,12 @@
     "url": "https://github.com/SudoDotDog/Sudoo-Flag-Node/issues"
   },
   "homepage": "https://github.com/SudoDotDog/Sudoo-Flag-Node#readme",
-  "dependencies": {},
+  "peerDependencies": {
+    "@sudoo/flag": "^1.0.0"
+  },
   "devDependencies": {
     "@sudoo/build-utils": "^1.0.0",
+    "@sudoo/flag": "^1.0.0",
     "@sudoo/license": "^1.1.0",
     "@sudoo/triforce": "^2.15.0"
   },
